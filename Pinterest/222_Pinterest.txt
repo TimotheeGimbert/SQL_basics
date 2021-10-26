@@ -1,0 +1,14 @@
+table 'pins'
+'id'
+'url' TEXT
+
+
+table 'user'
+'id'
+'name' TEXT
+
+table 'comment'
+'id'
+'pins_id' INTEGER
+'user_id' INTEGER
+'body' TEXT

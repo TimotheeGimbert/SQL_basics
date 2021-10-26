@@ -1,0 +1,9 @@
+table 'students'
+'id'
+'courses_id' INTEGER
+'name' TEXT
+
+
+table 'courses'
+'id'
+'name' TEXT

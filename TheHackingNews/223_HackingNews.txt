@@ -6,18 +6,18 @@ table 'users'
 table 'links'
 'id'
 'url' TEXT
-'user_id' INTEGER
+'users_id' INTEGER
 
 
 table 'comments'
 'id'
-'link_id' INTEGER
-'user_id' INTEGER
+'links_id' INTEGER
+'users_id' INTEGER
 'body' TEXT
 
 
 table 'comments_in'
 'id' (this id will preserve the order of comments on comment)
-'comment_id' INTEGER
-'user_id' INTEGER
+'comments_id' INTEGER
+'users_id' INTEGER
 'body' TEXT

@@ -6,5 +6,32 @@ SELECT COUNT(AlbumID) FROM albums; #returns 347
 
 DELETE FROM albums WHERE Title LIKE 'Music%';
 
-SELECT * FROM albums JOIN artists ON artists.ArtistId = albums.ArtistId WHERE artists.Name = 'AC/DC';
+SELECT * FROM albums 
+JOIN artists ON artists.ArtistId = albums.ArtistId 
+WHERE artists.Name = 'AC/DC';
 
+SELECT * FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+JOIN artists ON artists.ArtistId = albums.ArtistId 
+WHERE artists.Name = 'AC/DC';
+
+SELECT * FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+WHERE albums.Title = 'Let There Be Rock';
+
+SELECT SUM(UnitPrice) FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+WHERE albums.Title = 'Let There Be Rock';
+
+SELECT SUM(Milliseconds) FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+WHERE albums.Title = 'Let There Be Rock';
+
+SELECT SUM(UnitPrice) FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+JOIN artists ON artists.ArtistId = albums.ArtistId 
+WHERE artists.Name = 'Deep Purple';
+
+INSERT INTO artists (Name) VALUES ('Serge Gainsbourg');
+INSERT INTO albums (Title, ArtistId) VALUES ('Reggae', 276);
+INSERT INTO tracks (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES ('Aux Armes Etcaetera', 348, 1, 1, 'Serge only', 10000, 100000, 1.1);

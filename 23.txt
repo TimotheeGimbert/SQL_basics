@@ -1,0 +1,10 @@
+SELECT * FROM albums;
+
+SELECT * FROM albums WHERE Title LIKE 'Great%';
+
+SELECT COUNT(AlbumID) FROM albums; #returns 347
+
+DELETE FROM albums WHERE Title LIKE 'Music%';
+
+SELECT * FROM albums JOIN artists ON artists.ArtistId = albums.ArtistId WHERE artists.Name = 'AC/DC';
+

@@ -1,0 +1,12 @@
+table 'course'
+'id' 
+'title' TEXT
+'description' TEXT
+
+
+
+table 'lesson'
+'id'
+'course_id' INTEGER
+'title' TEXT
+'body' TEXT

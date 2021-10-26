@@ -1,0 +1,22 @@
+table 'user'
+'id'
+'name' TEXT
+
+
+table 'link'
+'id'
+'user_id' INTEGER
+
+
+table 'comment'
+'id'
+'link_id' INTEGER
+'user_id' INTEGER
+'body' TEXT
+
+
+table 'comment_in'
+'id' (this id will preserve the order of comments on comment)
+'comment_id' INTEGER
+'user_id' INTEGER
+'body' TEXT
